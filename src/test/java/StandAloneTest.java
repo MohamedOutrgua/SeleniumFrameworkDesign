@@ -51,7 +51,7 @@ public class StandAloneTest {
         driver.findElement(By.xpath("//body/app-root[1]/app-order[1]/section[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[3]/div[2]/div[2]/div[1]/div[1]/div[1]/section[1]/button[1]/span[1]")).click();
         driver.findElement(By.cssSelector(".btnn")).click();
         String confirmMessage = driver.findElement(By.cssSelector(".hero-primary")).getText();
-        Assert.assertTrue(confirmMessage.equalsIgnoreCase("THANKYOU FOR THE ORDER."));
+        Assert.assertTrue(confirmMessage.equalsIgnoreCase("THANKYOU FOR  ORDER."));
         driver.quit();
     }
 }
