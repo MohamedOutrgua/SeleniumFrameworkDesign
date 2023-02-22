@@ -28,7 +28,7 @@ public class StandAloneTest {
         driver.manage().window().maximize();
         driver.get("https://rahulshettyacademy.com/client");
         LandingPage landingPage = new LandingPage(driver);
-        driver.findElement(By.id("userEmail")).sendKeys("mohamedoutrgua01@gmail.com");
+        driver.findElement(By.id("userEmail")).sendKeys("1");
         driver.findElement(By.id("userPassword")).sendKeys("Mohamed2022");
         driver.findElement(By.id("login")).click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
@@ -51,7 +51,7 @@ public class StandAloneTest {
         driver.findElement(By.xpath("//body/app-root[1]/app-order[1]/section[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[3]/div[2]/div[2]/div[1]/div[1]/div[1]/section[1]/button[1]/span[1]")).click();
         driver.findElement(By.cssSelector(".btnn")).click();
         String confirmMessage = driver.findElement(By.cssSelector(".hero-primary")).getText();
-        Assert.assertTrue(confirmMessage.equalsIgnoreCase("THANKYOU FOR  ORDER."));
+        Assert.assertTrue(confirmMessage.equalsIgnoreCase("THANKYOU FOR THE ORDER."));
         driver.quit();
     }
 }
